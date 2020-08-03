@@ -65,7 +65,7 @@ public class DateParserTest {
     public void shouldThrowExceptionIfMonthIsMoreThan12() {
         try {
             new DateParser("2012-13").parse();
-            fail("Should have failed since the month is more than 12");
+            fail("Should have failed since the month is more than 12"  );
         } catch (IllegalArgumentException e) {
             assertThat(e.getMessage(), is("Month cannot be less than 1 or more than 12"));
         }
