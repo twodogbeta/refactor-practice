@@ -20,6 +20,7 @@ public class Customer {
 		return name;
 	}
 
+	// TODO too much jobs for this method ...
 	public String statement() {
 		double totalAmount = 0;
 		int frequentRenterPoints = 0;
@@ -31,19 +32,19 @@ public class Customer {
 
 			// determine amounts for each line
 			switch (each.getMovie().getPriceCode()) {
-			case Movie.REGULAR:
-				thisAmount += 2;
-				if (each.getDaysRented() > 2)
-					thisAmount += (each.getDaysRented() - 2) * 1.5;
-				break;
-			case Movie.NEW_RELEASE:
-				thisAmount += each.getDaysRented() * 3;
-				break;
-			case Movie.CHILDRENS:
-				thisAmount += 1.5;
-				if (each.getDaysRented() > 3)
-					thisAmount += (each.getDaysRented() - 3) * 1.5;
-				break;
+				case Movie.REGULAR:
+					thisAmount += 2;
+					if (each.getDaysRented() > 2)
+						thisAmount += (each.getDaysRented() - 2) * 1.5;
+					break;
+				case Movie.NEW_RELEASE:
+					thisAmount += each.getDaysRented() * 3;
+					break;
+				case Movie.CHILDRENS:
+					thisAmount += 1.5;
+					if (each.getDaysRented() > 3)
+						thisAmount += (each.getDaysRented() - 3) * 1.5;
+					break;
 
 			}
 

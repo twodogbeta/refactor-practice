@@ -1,6 +1,8 @@
 package com.twu.refactoring;
 
 public class Movie {
+
+	// TODO can refactor here to the Enum ...
 	public static final int  CHILDRENS = 2;
 	public static final int  REGULAR = 0;
 	public static final int  NEW_RELEASE = 1;
@@ -18,11 +20,10 @@ public class Movie {
 	}
 
 	public void setPriceCode(int arg) {
-    	priceCode = arg;
+		priceCode = arg;
 	}
 
 	public String getTitle () {
 		return title;
 	}
 }
-
