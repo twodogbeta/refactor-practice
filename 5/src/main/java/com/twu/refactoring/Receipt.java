@@ -36,4 +36,5 @@ public class Receipt {
 
         return totalCost * (1 + SALES_TAX_RATE);
     }
+
 }
